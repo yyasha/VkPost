@@ -2,8 +2,8 @@
 
 # Install Librares:
 
-_ pip3 install vk-api
+pip3 install vk-api
 
-_ pip3 install beautifulsoup4
+pip3 install beautifulsoup4
 
 # use python 3
