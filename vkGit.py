@@ -4,7 +4,7 @@ vk_session = vk_api.VkApi('phone', 'password')
 vk_session.auth()
 vk = vk_session.get_api()
 
-HalloMessage = f"-10 видео, которые я рекомендую посмотреть (обновляется каждый день)-\n{'-' * 35}\n"
+HelloMessage = f"-10 видео, которые я рекомендую посмотреть (обновляется каждый день)-\n{'-' * 35}\n"
 commentMessage = "код проекта - https://github.com/yyasha/VkPost"
 
 # ------------------------ 2 ------------------------ #
@@ -58,7 +58,7 @@ for i, tr in enumerate(soup.select('tr.pl-video')):
 			Message10 = Message
 
 		Number += 1
-GMessage = HalloMessage + Message10 + Message9 + Message8 + Message7 + Message6 + Message5 + Message4 + Message3 + Message2 + Message1
+GMessage = HelloMessage + Message10 + Message9 + Message8 + Message7 + Message6 + Message5 + Message4 + Message3 + Message2 + Message1
 i = vk.wall.post(message=GMessage)      #первый пост / first post
 PostId = i['post_id']
 vk.wall.createComment(post_id=PostId, message=commentMessage)
@@ -107,7 +107,7 @@ while True:
 				Message10 = Message
 
 			Number += 1
-	GMessage = HalloMessage + Message10 + Message9 + Message8 + Message7 + Message6 + Message5 + Message4 + Message3 + Message2 + Message1
+	GMessage = HelloMessage + Message10 + Message9 + Message8 + Message7 + Message6 + Message5 + Message4 + Message3 + Message2 + Message1
 
 	print(vk.wall.edit(message= GMessage, post_id=PostId))
 
