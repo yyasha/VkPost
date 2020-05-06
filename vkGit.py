@@ -58,7 +58,7 @@ while True:
 
 			Number += 1
 	GMessage = HalloMessage + Message10 + Message9 + Message8 + Message7 + Message6 + Message5 + Message4 + Message3 + Message2 + Message1
-	i = vk.wall.post(message=GMessage)      #первый пост / first post
+	i = vk.wall.post(message=GMessage)
 	PostId = i['post_id']
 	vk.wall.createComment(post_id=PostId, message=commentMessage)
 	vk.wall.pin(post_id=PostId)
